@@ -24,3 +24,6 @@ A group of configuration settings, scripts and more for my various used linux di
     - /media/music
     - /media/pictures
     - /media/videos
+
+### Fedora
+- rpm fusion?
