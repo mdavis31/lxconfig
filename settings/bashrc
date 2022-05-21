@@ -23,6 +23,7 @@ alias lm='exa -lgs modified --group-directories-first'
 alias lmr='exa -lgs modified --group-directories-first --reverse'
 alias konsave='python -m konsave'
 alias xcopy='xclip -sel clip'
+alias fstab='sudo vim /etc/fstab'
 
 if [ -d ~/.bashrc.d ]; then
 	for rc in ~/.bashrc.d/*; do

@@ -1,0 +1,12 @@
+# by Michael Davis
+
+alias l='exa --group-directories-first'
+alias ll='exa -lg --group-directories-first'
+alias ls='exa -lag --group-directories-first'
+alias lm='exa -lgs modified --group-directories-first'
+alias lmr='exa -lgs modified --group-directories-first --reverse'
+
+alias chrome='google-chrome-stable'
+alias konsave='python -m konsave'
+alias xcopy='xclip -sel clip'
+alias fstab='sudo vim /etc/fstab'

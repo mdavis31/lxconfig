@@ -15,9 +15,9 @@ def main ():
     iso = isoList[inp-1]
     print ()
 
-    print ("(1) SHA1, (2) SHA256, (3) MD5")
+    print ("(1) SHA1, (2) SHA256, (3) SHA512, (4) MD5")
     inp = int (input ("Select the correct algorithm from above: "))
-    algoType = "md5sum" if inp == 3 else ("sha256sum" if inp == 2 else "sha1sum")
+    algoType = "md5sum" if inp == 4 else ("sha512sum" if inp == 3 else "sha256sum" if inp == 2 else "sha1sum")
 
     print ()
 
@@ -31,8 +31,8 @@ def main ():
         gpg = inp
 
     # import all the keyrings
-    sys = os.popen ("gpg --keyserver keyserver.ubuntu.com --search-keys Manjaro Build Server")
-    print (sys)
+    print (os.popen ("gpg --keyserver keyserver.ubuntu.com --search-keys Manjaro Build Server"))
+    print (os.popen ("gpg --keyserver hkps://keys.openpgp.org --recv-keys 003DB8B0CB23504F"))
 
     
     isoFull = f"{PATH}/{iso}"
@@ -52,10 +52,10 @@ def main ():
 
     print ("Verifying the GPG signature...")
     sys = os.popen(f"gpg --verify {gpgFull} {isoFull}").read()
-    print (sys, sys.find ("Good"))
-    if sys.find("Good signature") != -1:
-        print ("sdasd")
-        print ("SUCCESS!")
+    #print (sys, str (sys).find ("Good"))
+    #if sys.find("Good signature") != -1:
+    #    print ("sdasd")
+    #    print ("SUCCESS!")
 
 
 
