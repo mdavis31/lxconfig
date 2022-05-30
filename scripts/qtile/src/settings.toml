@@ -1,0 +1,46 @@
+### Mike's QTILE/TOML Example - To Be Shared
+
+title = "My TOML Example"
+wallpaper = "lxconfig/wallpapers/poly-dots.jpg"
+
+[apps]
+terminal = "alacritty"
+editor = "code"
+fileManager = "thunar"
+browser = "google-chrome-stable"
+
+[fonts]
+normal = "Noto Sans"
+bold = "Noto Sans Bold"
+monospace = "Ubuntu Mono"
+
+[colors]
+lights = [ "#ffffff", "#e5eded", "#d2dbdc", "#c0cacb", "#aeb8ba" ]
+darks  = [ "#000000", "#121e26", "#1f2c33", "#2d3a40", "#3b484e" ]
+
+purple      = "#c678dd"
+blue        = "#51afef"
+yellow      = "#98be65"
+fadedpink = ["#51afef", "#006da7"]
+fadedblue = ["#a9a1e1", "#7b74b1"]
+
+    [colors.distro]
+    data = [
+        ["#282c34", "#282c34"],
+        ["#1c1f24", "#1c1f24"],
+        ["#dfdfdf", "#dfdfdf"],
+        ["#ff6c6b", "#ff6c6b"],
+        ["#98be65", "#98be65"],
+        ["#da8548", "#da8548"],
+        ["#51afef", "#006da7"],
+        ["#c678dd", "#c678dd"],
+        ["#46d9ff", "#46d9ff"],
+        ["#a9a1e1", "#7b74b1"]
+    ]
+
+[emojis]
+triangle-left = "\u25E2"
+volume-on = "\u1F508"
+battery = "\u1F50B"
+bullet = "\u2022"
+update = "\u27F3"

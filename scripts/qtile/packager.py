@@ -4,9 +4,12 @@ import glob
 VERSION = "1.0"
 QTILE_PATH = os.path.expanduser("~/.config/qtile")
 BACKUP = True
+PACKAGE_FOLDER = "src/"
 PACKAGE_FILES = [
     "config.py",
-    "autostart.sh"
+    "autostart.sh",
+    "metadata.py",
+    "settings.toml"
 ]
 
 def main ():
@@ -41,7 +44,7 @@ def unload_file (fname, fdir):
 
 def load_file (fname):
     print ("loading file <%s>" % fname)
-    return run_command ("cp %s %s/%s" % (fname, QTILE_PATH, fname))
+    return run_command ("cp %s%s %s/%s" % (PACKAGE_FOLDER, fname, QTILE_PATH, fname))
 
 def run_command (cmd, bytes=False):
     output = subprocess.run(cmd.split(' '), capture_output=True)
@@ -56,7 +59,6 @@ def get_digit(name):
     while name[-1].isdigit():
         result = name[-1] + result
         name = name[:-1]
-    print (result)
     return result
 
 
